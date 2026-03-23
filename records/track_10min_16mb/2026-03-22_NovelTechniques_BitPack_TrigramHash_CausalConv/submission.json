@@ -1,0 +1,25 @@
+{
+    "name": "Rohan Singhvi",
+    "github_id": "rohan-singhvi",
+    "val_bpb": null,
+    "model_bytes": null,
+    "code_bytes": null,
+    "total_bytes": null,
+    "hardware": "8xH100 SXM",
+    "training_time_seconds": 600,
+    "summary": "Composition/Superposition-informed LM: 9 novel techniques on SOTA base",
+    "techniques": [
+        "TrigramHash embedding (8192 buckets, dim=96)",
+        "Causal depthwise convolutions (kernel=4) per block",
+        "Frequency-tiered bigrams (top-256 dedicated, rest hashed)",
+        "relu³ MLP activation (superposition via sparsity)",
+        "Per-head k_gain + v_scale (compositional specialization)",
+        "Progressive sequence length (512->1024->2048)",
+        "Embedding orthogonality regularization (λ=0.001)",
+        "Mu-law quantization companding (μ=15)",
+        "Percentile clipping for intN quantization",
+        "BigramHash(10240), SmearGate, SWA(0.4)",
+        "Mixed int5/int6 quantization + zstd-22",
+        "Sliding window eval stride=64"
+    ]
+}
